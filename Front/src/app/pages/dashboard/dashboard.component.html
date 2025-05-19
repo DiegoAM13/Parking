@@ -1,0 +1,8 @@
+<p *ngIf="!userLoginOn">usuario no autenticado</p>
+<p *ngIf="userLoginOn">usuarioautenticado</p>
+<div *ngIf="userLoginOn">
+    <p>Nombre: {{userData?.id}}</p>
+    <p>usuario: {{userData?.usuario}}</p>
+    <p>contraseña: {{userData?.contrasena}}</p>
+
+</div>

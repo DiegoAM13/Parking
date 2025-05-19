@@ -1,0 +1,32 @@
+<p >Ingreso</p>
+
+<form  [formGroup]="loginForm">
+  <p class="text-danger">{{loginError}}</p>
+  <div class="mb-3">
+    <label for="usuarioinput" class="form-label">Usuario</label>
+    <input  formControlName="usuario" class="form-control" id="usuarioinput" aria-describedby="usuariohelp">
+    <div *ngIf="usuario.invalid && (usuario.dirty || usuario.touched)"  class="text-danger">
+
+        <div *ngIf="usuario.errors?.['required']">
+            Usuario es requerido
+        </div>
+        
+    </div>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="contraseñainput" class="form-label">Contraseña</label>
+    <input  formControlName="contrasena" type="password" class="form-control" id="contraseñainput">
+    <div *ngIf="contrasena.invalid && (contrasena.dirty || contrasena.touched)"  class="text-danger">
+
+        <div *ngIf="contrasena.errors?.['required']">
+            Contraseña es requerida
+        </div>
+        
+    </div>
+
+  </div>
+
+  <button type="submit" (click)="login()" class="btn btn-primary">Ingresar</button>
+</form>
