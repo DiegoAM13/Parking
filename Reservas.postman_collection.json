@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "3b82aad3-c59e-4ec9-991e-720dc2782c03",
+		"name": "Reservas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27816747"
+	},
+	"item": [
+		{
+			"name": "reservas/guardar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjIyMzEwLCJleHAiOjE3NDc2MjU5MTB9.IJ2r-3e452V0SkhiRoNE-S7lNRRmJEKiWoQ5rMt7QnY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"placa\": \"SS5\",\r\n  \"tipo\": \"moto\",\r\n  \"espacio_id\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/reservas/guardar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservas/tipo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjI3MzUxLCJleHAiOjE3NDc2MzA5NTF9.iUiFMBhp3cX03ZYamjGF-gDHSSW0Us3Pv0AbRhWwy0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/tipo/avion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"tipo",
+						"avion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/reservas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjI3MzUxLCJleHAiOjE3NDc2MzA5NTF9.iUiFMBhp3cX03ZYamjGF-gDHSSW0Us3Pv0AbRhWwy0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservas/placa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjI3MzUxLCJleHAiOjE3NDc2MzA5NTF9.iUiFMBhp3cX03ZYamjGF-gDHSSW0Us3Pv0AbRhWwy0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/placa/SS4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"placa",
+						"SS4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservas/eliminar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjI0NTEzLCJleHAiOjE3NDc2MjgxMTN9.fF5qTUIB4lCLD_vlHxEGaNDQSXukZaAcneF0fi24Z4I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/eliminar/ABC123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"eliminar",
+						"ABC123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservas/sacar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjIyMzEwLCJleHAiOjE3NDc2MjU5MTB9.IJ2r-3e452V0SkhiRoNE-S7lNRRmJEKiWoQ5rMt7QnY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/sacar/SS45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"sacar",
+						"SS45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservas/actualizar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjIyMzEwLCJleHAiOjE3NDc2MjU5MTB9.IJ2r-3e452V0SkhiRoNE-S7lNRRmJEKiWoQ5rMt7QnY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n  \"tipo\": \"carro\",\r\n  \"espacio_id\":7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/reservas/actualizar/SS45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"actualizar",
+						"SS45"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

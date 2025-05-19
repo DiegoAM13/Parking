@@ -1,0 +1,9 @@
+com\Parking\Seguridad\services\AuthService.class
+com\Parking\Seguridad\controllers\AuthController.class
+com\Parking\Seguridad\repositories\RoleRepository.class
+com\Parking\Seguridad\entities\Role.class
+com\Parking\Seguridad\dtos\NewUserDto.class
+com\Parking\Seguridad\repositories\UserRepository.class
+com\Parking\Seguridad\dtos\LoginUserDto.class
+com\Parking\Seguridad\entities\User.class
+com\Parking\Seguridad\services\UserService.class

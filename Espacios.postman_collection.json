@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "c1c0326a-507b-432b-8c85-051c8b4d8758",
+		"name": "Espacios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27816747"
+	},
+	"item": [
+		{
+			"name": "espacios/",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "espacios/guardar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NTk2ODQ4LCJleHAiOjE3NDc2MDA0NDh9.2U9Q8tMESKzlAdGpTrpBAF3SoNhkmmylQc0-MPXNmsM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n  {\r\n    \"tipo\": \"perro\",\r\n    \"disponible\": 4343\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/espacios/guardar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"espacios",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "espacios/actualizar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjAxNTczLCJleHAiOjE3NDc2MDUxNzN9.9kQ3elqpqY3UIJDSlq8XyZR_zpFEOsdmqLdGqxgbU5E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \r\n        \"tipo\":\"carro\" ,\r\n        \"disponible\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/espacios/actualizar/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"espacios",
+						"actualizar",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "espacios/eliminar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjAxNTczLCJleHAiOjE3NDc2MDUxNzN9.9kQ3elqpqY3UIJDSlq8XyZR_zpFEOsdmqLdGqxgbU5E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/espacios/eliminar/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"espacios",
+						"eliminar",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "espacios/id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NTk5ODY3LCJleHAiOjE3NDc2MDM0Njd9.bFEVjtVyWI5atfAGptkdulcIbrgzGp1c-Gv2Dl4dVw8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/espacios/id/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"espacios",
+						"id",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "espacios/disponibles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjAxNTczLCJleHAiOjE3NDc2MDUxNzN9.9kQ3elqpqY3UIJDSlq8XyZR_zpFEOsdmqLdGqxgbU5E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/espacios/disponibles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"espacios",
+						"disponibles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "espacios/ocupados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjAxNTczLCJleHAiOjE3NDc2MDUxNzN9.9kQ3elqpqY3UIJDSlq8XyZR_zpFEOsdmqLdGqxgbU5E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/espacios/ocupados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"espacios",
+						"ocupados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "espacios/tipo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSIiwiaWF0IjoxNzQ3NjAxNTczLCJleHAiOjE3NDc2MDUxNzN9.9kQ3elqpqY3UIJDSlq8XyZR_zpFEOsdmqLdGqxgbU5E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/espacios/motos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"espacios",
+						"motos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
