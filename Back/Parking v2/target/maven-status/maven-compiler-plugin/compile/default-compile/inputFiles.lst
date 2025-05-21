@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\Config\SecurityConfig.java
 C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\controllers\AuthController.java
 C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\dtos\LoginUserDto.java
@@ -14,20 +13,3 @@ C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\reposito
 C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\SeguridadApplication.java
 C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\services\AuthService.java
 C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\services\UserService.java
-=======
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\Config\SecurityConfig.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\controllers\AuthController.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\dtos\LoginUserDto.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\dtos\NewUserDto.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\entities\Role.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\entities\User.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\enums\RoleList.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\jwt\JwtAuthenticationFilter.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\jwt\JwtEntryPoint.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\jwt\JwtUtil.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\repositories\RoleRepository.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\repositories\UserRepository.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\SeguridadApplication.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\services\AuthService.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\services\UserService.java
->>>>>>> e093025465f59ccaef8ce613cba2b5951f0e2cb8
