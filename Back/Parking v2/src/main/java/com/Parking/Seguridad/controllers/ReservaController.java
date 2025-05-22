@@ -1,6 +1,7 @@
 package com.Parking.Seguridad.controllers;
 
 import com.Parking.Seguridad.dtos.ReservaDTO;
+import com.Parking.Seguridad.dtos.SalidaDTO;
 import com.Parking.Seguridad.entities.Espacio;
 import com.Parking.Seguridad.entities.Reserva;
 import com.Parking.Seguridad.repositories.EspacioRepository;
@@ -66,13 +67,14 @@ public class ReservaController {
     @PutMapping("/sacar/{placa}")
     public ResponseEntity<?> sacarVehiculo(@PathVariable String placa)
     {
+
         try{
-            Reserva reservaSacada = reservaService.sacar(placa);
-            return  ResponseEntity.ok(reservaSacada);
+            SalidaDTO SalidaDTO = reservaService.sacar(placa);
+            return  ResponseEntity.ok(SalidaDTO);
         }catch (Exception e)
         {
+            e.printStackTrace();
              return  ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al sacar el vehiculo");
-
         }
 
     }

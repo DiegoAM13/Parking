@@ -1,15 +1,27 @@
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\Config\SecurityConfig.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\controllers\AuthController.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\dtos\LoginUserDto.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\dtos\NewUserDto.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\entities\Role.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\entities\User.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\enums\RoleList.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\jwt\JwtAuthenticationFilter.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\jwt\JwtEntryPoint.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\jwt\JwtUtil.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\repositories\RoleRepository.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\repositories\UserRepository.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\SeguridadApplication.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\services\AuthService.java
-C:\Users\Usuario\Pictures\Seguridad\src\main\java\com\Parking\Seguridad\services\UserService.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\Config\DataLoader.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\Config\SecurityConfig.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\controllers\AuthController.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\controllers\EspacioController.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\controllers\ReservaController.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\dtos\LoginUserDto.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\dtos\NewUserDto.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\dtos\ReservaDTO.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\dtos\SalidaDTO.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\entities\Espacio.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\entities\Reserva.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\entities\Role.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\entities\User.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\enums\RoleList.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\enums\TipoVehiculo.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\jwt\JwtAuthenticationFilter.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\jwt\JwtEntryPoint.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\jwt\JwtUtil.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\repositories\EspacioRepository.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\repositories\ReservaRepository.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\repositories\RoleRepository.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\repositories\UserRepository.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\SeguridadApplication.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\services\AuthService.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\services\EspacioService.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\services\ReservaService.java
+C:\Users\ASUS\Documents\Universidad\Ing_Informatica\_ComputacionOS\Parking\Back\Parking v2\src\main\java\com\Parking\Seguridad\services\UserService.java

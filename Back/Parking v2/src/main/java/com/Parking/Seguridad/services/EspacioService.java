@@ -1,6 +1,7 @@
 package com.Parking.Seguridad.services;
 
 import com.Parking.Seguridad.entities.Espacio;
+import com.Parking.Seguridad.enums.TipoVehiculo;
 import com.Parking.Seguridad.repositories.EspacioRepository;
 import com.Parking.Seguridad.repositories.ReservaRepository;
 import jakarta.persistence.EntityNotFoundException;
@@ -20,6 +21,9 @@ public class EspacioService {
     private ReservaRepository reservaRepository;
 
     public void guardarEspacio(Espacio espacio){
+        if (!TipoVehiculo.esValido(espacio.getTipo())) {
+            throw new IllegalArgumentException("El tipo de vehículo debe ser 'Moto' o 'Carro'");
+        }
         espacioRepository.save(espacio);
     }
 

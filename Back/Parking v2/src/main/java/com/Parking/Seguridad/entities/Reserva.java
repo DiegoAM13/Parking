@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -30,6 +31,9 @@ public class Reserva {
 
     @Column(nullable = true)
     private LocalDateTime horaSalida;
+
+    @Column
+    private BigDecimal valorAPagar;
 
     @ManyToOne
     @JoinColumn(name = "espacio_id", nullable = false)

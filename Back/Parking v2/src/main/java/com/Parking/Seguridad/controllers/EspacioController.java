@@ -40,7 +40,6 @@ public class EspacioController {
         {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-
     }
 
     @PutMapping("/actualizar/{id}")
