@@ -1,0 +1,148 @@
+<div class="container text-center">
+  <br>
+  <h2 class="container text-center">Reservas</h2>
+  <br>
+
+
+  <div class="row mb-3">
+    <div class="col">
+      <select class="form-control" [(ngModel)]="filtroTipo" (change)="filtrarEspacios()">
+        <option value="">Todos los tipos</option>
+        <option value="carro">Carro</option>
+        <option value="moto">Moto</option>
+      </select>
+    </div>
+
+  </div>
+  <br>
+
+
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Placa</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Hora de llegada</th>
+        <th scope="col">Espacio</th>
+        <th scope="col" *ngIf="EsAdmin()">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reserva of reservas">
+        <td scope="row">{{ reserva.placa }}</td>
+        <td>{{ reserva.tipo }}</td>
+        <td>{{ reserva.horaLlegada }}</td>
+        <td>{{ reserva.espacio.id }}</td>
+        <td *ngIf="EsAdmin()">
+
+          <button class="btn btn-sm btn-info" (click)="Liquidar(reserva.placa)" data-bs-toggle="modal"
+            data-bs-target="#Liquidar">
+            💸
+          </button>
+          <button class="btn btn-sm btn-danger" (click)="Eliminar(reserva.placa)" data-bs-toggle="modal"
+            data-bs-target="#confirmarEliminarModal">
+            🗑️
+          </button>
+          <button class="btn btn-sm btn-warning" (click)="abrirModal(reserva)" data-bs-toggle="modal"
+            data-bs-target="#editarModal">
+            ✏️
+          </button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+
+
+
+<div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editarModalLabel">Editar Reserva</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="mb-3">
+          <input type="text" [(ngModel)]="ReservaData.placa" name="placa" placeholder="Placa"
+            class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-select-label" for="Select">Seleccione el tipo de vehiculo</label>
+          <select class="form-control" [(ngModel)]="ReservaData.tipo" id="Select">
+            <option value="carro">Carro</option>
+            <option value="moto">Moto</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <input type="number" [(ngModel)]="ReservaData.espacio_id" name="espacio" placeholder="Espacio"
+            class="form-control">
+        </div>
+        <br>
+        <p *ngIf="error" class="text-danger mt-3 text-center">{{ error }}</p>
+        <p *ngIf="success" class="text-success mt-3 text-center">{{ success }}</p>
+        <br>
+
+        <button type="submit" (click)="guardarCambios()" class="btn btn-primary">Guardar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="Liquidar" tabindex="-1" aria-labelledby="Liquidar" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="Liquidar">Liquidar Vehiculo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        <p>PLaca: {{ Liquidacion?.placa }}</p>
+        <p>Hora de salida: {{ Liquidacion?.horaSalida | date:'dd/MM/yyyy hh:mm a' }}</p>
+        <p>Valor a pagar: {{ Liquidacion?.valorAPagar }}</p>
+      </div>
+
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Regresar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="confirmarEliminarModal" tabindex="-1" aria-labelledby="confirmarEliminarLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmarEliminarLabel">Confirmar eliminación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        ¿Estás seguro de que deseas eliminar esta reserva?
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" (click)="ConfirmarEliminar()">Eliminar</button>
+      </div>
+
+    </div>
+  </div>
+</div>

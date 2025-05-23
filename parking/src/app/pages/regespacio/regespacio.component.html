@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <br>
+    <h1>Administracion de espacios</h1>
+    <br>
+
+    <label class="form-select-label" for="Select">Seleccione el tipo de vehiculo</label>
+    <select class="form-control" [(ngModel)]="EspacioData.tipo" id="Select">
+        <option value="carro">Carro</option>
+        <option value="moto">Moto</option>
+
+    </select>
+    <br>
+    <button class="btn btn-primary" (click)="register()">Registrar</button>
+
+    <br>
+    <br>
+    <div *ngIf="success" style="color:green">{{ success }}</div>
+    <div *ngIf="error" style="color:red">{{ error }}</div>
+
+</div>
+
+<button class="btn btn-secondary" (click)="volver()">Volver</button>

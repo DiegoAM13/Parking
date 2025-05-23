@@ -1,0 +1,120 @@
+<div class="container text-center">
+  <br>
+  <h2 class="text-center">Espacios</h2>
+  <br>
+
+  <div class="row mb-3">
+    <div class="col">
+      <select class="form-control" [(ngModel)]="filtroTipo" (change)="filtrarEspacios()">
+        <option value="">Todos los tipos</option>
+        <option value="carro">Carro</option>
+        <option value="moto">Moto</option>
+      </select>
+    </div>
+
+    <div class="col">
+      <select class="form-control" [(ngModel)]="filtroEstado" (change)="filtrarEspacios()">
+        <option value="">Todos</option>
+        <option value="disponibles">Disponibles</option>
+        <option value="ocupados">Ocupados</option>
+      </select>
+    </div>
+  </div>
+
+
+
+
+
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Espacio</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Disponible</th>
+        <th scope="col" *ngIf="EsAdmin()" >Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let espacio of espacios">
+        <td scope="row">{{ espacio.id }}</td>
+        <td>{{ espacio.tipo }}</td>
+        <td>
+          <span [ngStyle]="{color: espacio.disponible ? 'green' : 'red'}">
+            {{ espacio.disponible ? 'Sí' : 'No' }}
+          </span>
+        </td>
+        <td *ngIf="EsAdmin()">
+          <!-- Mostrar ícono solo si está disponible -->
+          <button *ngIf="espacio.disponible" class="btn btn-sm btn-warning" (click)="abrirModal(espacio)"
+            data-bs-toggle="modal" data-bs-target="#editarModal">
+            ✏️
+          </button>
+           <button *ngIf="espacio.disponible" class="btn btn-sm btn-danger" (click)="Eliminar(espacio.id)"
+            data-bs-toggle="modal" data-bs-target="#confirmarEliminarModal">
+            🗑️
+          </button>
+          <button *ngIf="espacio.disponible" class="btn btn-sm btn-success" (click)="CrearEspacio(espacio.id, espacio.tipo)" >
+            ➕
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+</div>
+
+<button  *ngIf="EsAdmin()" class="btn btn-primary" (click)="regEspacio()">Registrar espacio</button>
+
+
+<div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editarModalLabel">Editar Espacio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        
+          <div class="mb-3">
+            <label class="form-select-label" for="Select">Seleccione el tipo de vehiculo</label>
+            <select class="form-control" [(ngModel)]="espacioSeleccionado.tipo" id="Select">
+              <option value="carro">Carro</option>
+              <option value="moto">Moto</option>
+            </select>
+          </div>
+          
+
+          <button type="submit" (click)="guardarCambios()" class="btn btn-primary">Guardar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="confirmarEliminarModal" tabindex="-1" aria-labelledby="confirmarEliminarLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmarEliminarLabel">Confirmar eliminación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        ¿Estás seguro de que deseas eliminar este espacio?
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" (click)="ConfirmarEliminar()">Eliminar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
