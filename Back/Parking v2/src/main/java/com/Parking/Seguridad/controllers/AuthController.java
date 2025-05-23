@@ -58,6 +58,4 @@ public class AuthController {
     {
         return ResponseEntity.ok().body("Autenticado");
     }
-
-
 }

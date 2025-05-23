@@ -1,5 +1,6 @@
 package com.Parking.Seguridad.entities;
 
+import com.Parking.Seguridad.enums.TipoVehiculo;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +20,11 @@ public class Espacio {
     @Column(nullable = false)
     private String tipo;
 
+/*    @Enumerated(EnumType.STRING)
+    private TipoVehiculo tipo;*/
+
     @Column(nullable = false)
     private Boolean disponible;
+
+
 }
